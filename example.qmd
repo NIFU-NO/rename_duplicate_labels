@@ -1,0 +1,32 @@
+---
+title: "Rename_duplicate_labels Example"
+format: html
+---
+
+## Heading2{#sec-h}
+
+```{r}
+#| label: 'fig-complicated_label_123_text'
+plot(mtcars$mpg, mtcars$disp)
+```
+
+## Heading3{#sec-h2}
+
+```{r}
+#| label: 'fig-different_label'  
+plot(mtcars$mpg, mtcars$qsec)
+```
+
+## Heading4 {#sec-h3}
+
+```{r}
+#| label: 'fig-complicated_label_123_text2' 
+plot(mtcars$mpg, mtcars$hp)
+```
+
+
+## Heading5 {#sec-s}
+```{r}
+#| label: 'fig-complicated_label_123_text3'  
+plot(mtcars$hp, mtcars$mpg)
+```

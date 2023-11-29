@@ -1,0 +1,4 @@
+project:
+  type: website
+  pre-render:
+  - _extensions/rename_duplicate_labels/rename_duplicate_labels.R

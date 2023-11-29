@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "example.html",
+    "href": "example.html",
+    "title": "Rename_duplicate_labels Example",
+    "section": "",
+    "text": "plot(mtcars$mpg, mtcars$disp)\n\n\n\n\n\n\n\nFigure 1"
+  },
+  {
+    "objectID": "example.html#sec-h",
+    "href": "example.html#sec-h",
+    "title": "Rename_duplicate_labels Example",
+    "section": "",
+    "text": "plot(mtcars$mpg, mtcars$disp)\n\n\n\n\n\n\n\nFigure 1"
+  },
+  {
+    "objectID": "example.html#sec-h2",
+    "href": "example.html#sec-h2",
+    "title": "Rename_duplicate_labels Example",
+    "section": "Heading3",
+    "text": "Heading3\n\nplot(mtcars$mpg, mtcars$qsec)\n\n\n\n\n\n\n\nFigure 2"
+  },
+  {
+    "objectID": "example.html#sec-h3",
+    "href": "example.html#sec-h3",
+    "title": "Rename_duplicate_labels Example",
+    "section": "Heading4",
+    "text": "Heading4\n\nplot(mtcars$mpg, mtcars$hp)\n\n\n\n\n\n\n\nFigure 3"
+  },
+  {
+    "objectID": "example.html#sec-s",
+    "href": "example.html#sec-s",
+    "title": "Rename_duplicate_labels Example",
+    "section": "Heading5",
+    "text": "Heading5\n\nplot(mtcars$hp, mtcars$mpg)\n\n\n\n\n\n\n\nFigure 4"
+  },
+  {
+    "objectID": "deeply/nested/files/file.html",
+    "href": "deeply/nested/files/file.html",
+    "title": "Rename_duplicate_labels Example 2",
+    "section": "",
+    "text": "plot(mtcars$mpg, mtcars$disp)\n\n\n\n\n\n\n\nFigure 1"
+  },
+  {
+    "objectID": "deeply/nested/files/file.html#sec-h",
+    "href": "deeply/nested/files/file.html#sec-h",
+    "title": "Rename_duplicate_labels Example 2",
+    "section": "",
+    "text": "plot(mtcars$mpg, mtcars$disp)\n\n\n\n\n\n\n\nFigure 1"
+  },
+  {
+    "objectID": "deeply/nested/files/file.html#sec-h2",
+    "href": "deeply/nested/files/file.html#sec-h2",
+    "title": "Rename_duplicate_labels Example 2",
+    "section": "Heading3",
+    "text": "Heading3\n\nplot(mtcars$mpg, mtcars$qsec)\n\n\n\n\n\n\n\nFigure 2"
+  },
+  {
+    "objectID": "deeply/nested/files/file.html#sec-h3",
+    "href": "deeply/nested/files/file.html#sec-h3",
+    "title": "Rename_duplicate_labels Example 2",
+    "section": "Heading4",
+    "text": "Heading4\n\nplot(mtcars$mpg, mtcars$hp)\n\n\n\n\n\n\n\nFigure 3"
+  },
+  {
+    "objectID": "deeply/nested/files/file.html#sec-s",
+    "href": "deeply/nested/files/file.html#sec-s",
+    "title": "Rename_duplicate_labels Example 2",
+    "section": "Heading5",
+    "text": "Heading5\n\nplot(mtcars$hp, mtcars$mpg)\n\n\n\n\n\n\n\nFigure 4"
+  }
+]
