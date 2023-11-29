@@ -1,13 +1,11 @@
-# Rename_duplicate_labels Extension For Quarto
+# rename_duplicate_labels Extension For Quarto
 
-_TODO_: Add a short description of your extension.
+For a given project render, rename any duplicate chunk labels (and references to these) across a file, and across files (e.g. chapters).
 
 ## Installing
 
-_TODO_: Replace the `<github-organization>` with your GitHub organization.
-
 ```bash
-quarto add <github-organization>/rename_duplicate_labels
+quarto add NIFU-NO/rename_duplicate_labels
 ```
 
 This will install the extension under the `_extensions` subdirectory.
@@ -15,7 +13,13 @@ If you're using version control, you will want to check in this directory.
 
 ## Using
 
-_TODO_: Describe how to use your extension.
+```yaml
+project:
+  pre-render:
+    - "_extensions/rename_duplicate_labels.R"
+```
+
+- can also be used manually of course.
 
 ## Example
 
