@@ -35,6 +35,7 @@ process_files <- function(files) {
     
     # Write the modified lines back to the file
     if(!is.null(new_lines))  writeLines(new_lines, filepath)
+    filepath
   })
   
   message("Completed rename_duplicate_labels")
