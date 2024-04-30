@@ -24,16 +24,17 @@ process_files <- function(files) {
         # If this label has been encountered before, append a digit
         if (label_counts[label] > 1) {
           # Replace the last character (which is an apostrophe) with a digit and an apostrophe
-          line <- stringi::stri_replace_last_regex(line, 
+          new_line <- stringi::stri_replace_last_regex(line, 
                                                    pattern = "(['\\}])", 
                                                    replacement = paste0(label_counts[label], "$1"))
         }
       }
-      return(line)
+      if(!is.null(new_line)) new_line else line
+      
     }, USE.NAMES = FALSE)
     
     # Write the modified lines back to the file
-    writeLines(new_lines, filepath)
+    if(!is.null(new_lines))  writeLines(new_lines, filepath)
   })
   
   message("Completed rename_duplicate_labels")
