@@ -12,7 +12,7 @@ process_files <- function(files) {
     lines <- readLines(file.path(filepath), warn = FALSE)
     
     # Process each line in the file
-    new_lines <- sapply(lines, function(line) {
+    lines <- sapply(lines, function(line) {
       if (stringi::stri_detect_regex(line, pattern = "^#\\| label: '|^#+[[:space:]]+[^\\{]+\\{#sec-[^\\}]+\\}")) {
         # Extract the label
         label <- stringi::stri_replace_first_regex(line, 
@@ -21,20 +21,21 @@ process_files <- function(files) {
         if (is.na(label_counts[label])) label_counts[label] <<- 0
         # Increment the count for this label
         label_counts[label] <<- label_counts[label] + 1
-        # If this label has been encountered before, append a digit
+        # If this label has been encountered before, append a digit to label
         if (label_counts[label] > 1) {
+          print(paste0("Modifying: ", filepath))
           # Replace the last character (which is an apostrophe) with a digit and an apostrophe
           new_line <- stringi::stri_replace_last_regex(line, 
                                                    pattern = "(['\\}])", 
                                                    replacement = paste0(label_counts[label], "$1"))
         }
       }
-      if(!is.null(new_line)) new_line else line
+      if(exists("new_line")) new_line else line
       
     }, USE.NAMES = FALSE)
     
     # Write the modified lines back to the file
-    if(!is.null(new_lines))  writeLines(new_lines, filepath)
+    if(!is.null(lines))  writeLines(lines, filepath)
     filepath
   })
   
