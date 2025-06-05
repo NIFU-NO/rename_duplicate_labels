@@ -12,7 +12,7 @@ process_files <- function(files) {
     lines <- readLines(file.path(filepath), warn = FALSE)
 
     # Process each line in the file
-    lines <- sapply(lines, function(line) {
+    lines_processed <- sapply(lines, function(line) {
       if (stringi::stri_detect_regex(line, pattern = "^#\\| label: '|^#+[[:space:]]+[^\\{]+\\{#sec-[^\\}]+\\}")) {
         # Extract the label
         label <- stringi::stri_replace_first_regex(line,
@@ -36,7 +36,7 @@ process_files <- function(files) {
     }, USE.NAMES = FALSE)
 
     # Write the modified lines back to the file
-    if (is.character(lines)) writeLines(lines, filepath)
+    if (is.character(lines) && lines != lines_processed) writeLines(lines, filepath)
     filepath
   })
 
